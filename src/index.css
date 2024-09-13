@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* width: 100vw; */
+  min-height: 100vh;
+  position: relative;
+  right: 0px;
+  /* background: linear-gradient(white, rgb(243, 245, 248), rgb(243, 245, 248)); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* background-color: rgb(243, 245, 248); */
+  /* background-image: url(https://cdn.pixabay.com/photo/2023/08/12/02/50/leaves-8184621_1280.png); 
+  background-repeat: no-repeat;
+  background-size: cover; */
+  /* color: rgba(0, 0, 0, 0.10) !important; */
+}
+
+.sub-menu {
+  .ant-dropdown-menu-submenu-arrow {
+    display: none !important;
+  }
+}
+
+.hover-magnify:hover {
+  scale: 1.07;
+  transition: all 0.4s ease;
+}
+
+.ant-picker-content thead tr th {
+  background: rgb(235 235 235);
+  border-bottom: 2px solid rgb(213, 213, 213);
+  /* border-top: 1px solid rgb(192, 192, 192); */
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-weight: 600 !important;
+}
+
+.ant-picker-content {
+  border-radius: 5px !important;
+  border-left: 1px solid rgb(235 235 235);
+  border-bottom: 1px solid rgb(235 235 235);
+}
+
+.ant-picker-content tbody tr td {
+  border-right: 1px solid rgb(235 235 235);
+
+}
+
+.ant-drawer-content{
+  z-index: 999999 !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*:hover{
+  /* outline-color: red !important; */
+}
+
+.employee-card:hover{
+  box-shadow: 0px 0px 10px 0px #F0F0F0;
+}
+
+hr {
+  border: 1px solid #d4d4d4;
+}
+
+b {
+  font-weight: 600;
+}
