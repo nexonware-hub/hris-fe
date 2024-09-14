@@ -104,7 +104,7 @@ const Home = () => {
         maxWidth: '70vw'
       }}>
         {state.tools?.find(x => x.displayName == 'Organisational Chart') &&
-        <Link className='hover-magnify' style={{textDecoration: 'none', marginBottom: '30px', color: primaryTextColor, marginRight: '95px'}} to="/organisationalchart">
+        <Link className='hover-magnify' style={{textDecoration: 'none', marginBottom: '30px', color: primaryTextColor, marginRight: '40px'}} to="/organisationalchart">
         <DeploymentUnitOutlined style={{...toolIconCommonCss, backgroundColor: '#4285F4'}} />
         <br/>
         <br/>
@@ -113,7 +113,7 @@ const Home = () => {
 
 
         {state.tools?.find(x => x.displayName == 'Leaves') &&
-        <Link className='hover-magnify' style={{textDecoration: 'none', marginBottom: '30px', color: primaryTextColor, marginRight: '95px'}} to="/leaves">
+        <Link className='hover-magnify' style={{textDecoration: 'none', marginBottom: '30px', color: primaryTextColor, marginRight: '40px'}} to="/leaves">
         <CompassOutlined 
             style={{
               ...toolIconCommonCss,
@@ -127,7 +127,7 @@ const Home = () => {
     }
 
         {state.tools?.find(x => x.displayName == 'Expenses') &&
-        <Link className='hover-magnify' style={{textDecoration: 'none', marginBottom: '30px', color: primaryTextColor, marginRight: '95px'}} to="/expenses">
+        <Link className='hover-magnify' style={{textDecoration: 'none', marginBottom: '30px', color: primaryTextColor, marginRight: '40px'}} to="/expenses">
         <ApartmentOutlined style={{...toolIconCommonCss, backgroundColor: '#0F9D58'}} />
         <br/>
         <br/>
@@ -135,7 +135,7 @@ const Home = () => {
         </Link>}
 
         {state.tools?.find(x => x.displayName == 'Career & Performance') &&
-        <Link className='hover-magnify' style={{textDecoration: 'none', marginBottom: '30px', color: primaryTextColor, marginRight: '95px'}} to="/career&performance">
+        <Link className='hover-magnify' style={{textDecoration: 'none', marginBottom: '30px', color: primaryTextColor, marginRight: '40px'}} to="/career&performance">
         <RocketFilled style={{...toolIconCommonCss, backgroundColor: '#F4B400'}} />
         <br/>
         <br/>
@@ -144,14 +144,14 @@ const Home = () => {
 
  
         {state.tools?.find(x => x.displayName == 'Analytics') &&
-        <Link className='hover-magnify' style={{textDecoration: 'none', marginBottom: '30px', color: primaryTextColor, marginRight: '95px'}} to="/analytics">
+        <Link className='hover-magnify' style={{textDecoration: 'none', marginBottom: '30px', color: primaryTextColor, marginRight: '40px'}} to="/analytics">
         <BarChartOutlined style={{...toolIconCommonCss, backgroundColor: primaryTextColor}} />
         <br/>
         <br/>
         Analytics
         </Link>}
 
-        <Link className='hover-magnify' style={{textDecoration: 'none', color: primaryTextColor, marginBottom: '30px', marginRight: '95px'}} to="/requestTools">
+        <Link className='hover-magnify' style={{textDecoration: 'none', color: primaryTextColor, marginBottom: '30px', marginRight: '40px'}} to="/requestTools">
         <PlusCircleOutlined style={{fontSize: '35px', backgroundColor: greyOnWhiteColor, cursor: 'pointer', color: primaryTextColor, borderRadius: '6px', ...toolIconCommonCss }} />
         <br/>
         <br/>
