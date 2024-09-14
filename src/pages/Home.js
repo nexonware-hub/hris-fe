@@ -87,18 +87,19 @@ const Home = () => {
       <br/>
       <div style={{
         position: 'absolute',
-        right: '0px',
+        left: '0px',
         top: '115px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
         backgroundColor: 'rgba(255,255,255)',
         // borderRadius: '999px 0px 0px 999px',
-        borderRadius: '10px 0px 0px 10px',
+        borderRadius: '0px 10px 10px 0px',
         display: 'flex inline',
         justifyContent: 'flex-start',
         alignItems: 'center',
         paddingTop: '60px',
         paddingBottom: '15px',
-        paddingLeft: '65px',
+        paddingLeft: '50px',
+        paddingRight: '15px',
         flexWrap: 'wrap',
         fontSize: '14px',
         maxWidth: '70vw'
@@ -152,7 +153,7 @@ const Home = () => {
         </Link>}
 
         <Link className='hover-magnify' style={{textDecoration: 'none', color: primaryTextColor, marginBottom: '30px', marginRight: '40px'}} to="/requestTools">
-        <PlusCircleOutlined style={{fontSize: '35px', backgroundColor: greyOnWhiteColor, cursor: 'pointer', color: primaryTextColor, borderRadius: '6px', ...toolIconCommonCss }} />
+        <PlusCircleOutlined style={{fontSize: '35px', backgroundColor: greyOnWhiteColor, cursor: 'pointer', color: 'black', borderRadius: '6px', ...toolIconCommonCss }} />
         <br/>
         <br/>
         More Tools  <br/> &nbsp;
