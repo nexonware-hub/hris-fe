@@ -69,14 +69,16 @@ function Leaves() {
           
     </Col>
 
-    <Col xs={24} md={10} align="center" style={{padding: '0px 20px'}}>
+    <Col xs={24} md={10} align="center">
     
     {loadingLeaveApplications ? <div align="center">
         <br/>
         <br/>
         <br/>
-    <Spinner text={t('Leaves')} /></div> :  
-    <div align="center">
+        <br/>
+        <br/>
+    <Spinner /></div> :  
+    <div align="center" style={{padding: '0px 20px'}}>
         <Tabs
         align='left'
                 id="career-and-performance-tabs"
