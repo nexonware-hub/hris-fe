@@ -104,7 +104,7 @@ function OrgChart() {
                     </>
                 }
                     
-                <Drawer placement="right" width={'35%'} style={{padding: '3px'}} onClose={() => {
+                <Drawer placement="right" width={'100%'} style={{padding: '3px'}} onClose={() => {
                     setFlyOutForEmployeeInfo(false);
                 }} open={orgChartState.flyOutForEmployeeInfo}>
                     {

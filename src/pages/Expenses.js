@@ -133,7 +133,7 @@ function Expenses() {
                 ]}
                 />
                 </div>}
-            <Drawer title={<span style={{fontWeight: '500'}}>Add Expense</span>} placement="right" width={'50%'} style={{padding: '3px'}} onClose={() => {
+            <Drawer title={<span style={{fontWeight: '500'}}>Add Expense</span>} placement="right" width={'100%'} style={{padding: '3px'}} onClose={() => {
                 setExpenseFormFlyOut(false);
                 }} open={expenseFormFlyOut}> 
                 <br/> 

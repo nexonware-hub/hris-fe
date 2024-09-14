@@ -77,7 +77,7 @@ const calculateTenure = (startDate) => {
             <Row gutter={24} style={{
                 display: 'flex', justifyContent: 'flex-start'
             }}>
-                <Col style={{ marginRight: '10px', marginLeft: '40px', textAlign: 'right', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', justifyContent: 'flex-start' }}>
+                <Col style={{ marginRight: '10px', textAlign: 'right', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', justifyContent: 'flex-start' }}>
                     < div
                         className='fluid-border'
                     >
@@ -90,7 +90,10 @@ const calculateTenure = (startDate) => {
                         onChange={handleUpload}
                     >
                         <span><UploadOutlined style={{color: infoColor}} />&nbsp; Change</span>
-                    </Upload> </div>}
+                    </Upload> 
+                    <br/>
+                    <br/>
+                    </div>}
                 </Col>
                 <Col style={{display: 'flex', alignItems: 'flex-start'}}>
                     <div>
