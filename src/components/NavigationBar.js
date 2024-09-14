@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { getRequests } from "../services/requestsService";
 import { CaretDownOutlined } from '@ant-design/icons';
 import { Roles } from "../Constants";
+import { logout } from "../auth";
 
 
 function Navigationbar({companyName}) {
@@ -67,7 +68,9 @@ const primaryColor = primaryTextColor;
       <SafetyCertificateOutlined />&nbsp; Audit logs
     </Link>
   </Menu.Item>
-  <Menu.Item key="6">
+  <Menu.Item key="6" onClick={() => {
+    logout();
+  }}>
     Log Out
   </Menu.Item>
 </Menu>

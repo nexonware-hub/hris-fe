@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, DatePicker, Switch, Alert, Select, message, Spin } from 'antd';
+import { Form, Input, Button, DatePicker, Switch, Alert, Select, message, Spin, Col, Row } from 'antd';
 import moment from 'moment';
 import ToolBanner from './ToolBanner';
 import { t } from 'i18next';
@@ -50,10 +50,16 @@ const NewEmployeeForm = () => {
     <>
         <ToolBanner icon={<UserAddOutlined />} title={t('Add Employee')} subTitle={'Add a new employee to company directory'} />
         <br/>
-    <div style={{display: 'flex', justifyContent: 'space-around', }}>
-        <img src={signin} style={{width:'30%'}} />
-        
-    <div style={{width: '40%', border: '1px solid ' + greyOnWhiteColor, borderRadius: primaryBorderRadius}}>
+        <Row>
+    <Col xs={0} md={2}></Col>
+
+    <Col xs={24} md={10} style={{height: '30vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}} align="center">
+    <img src={signin} style={{width:'60%'}} />
+ 
+    </Col>
+
+    <Col xs={24} md={10} align="center" style={{padding: '0px 20px'}}>
+    <div style={{ border: '1px solid ' + greyOnWhiteColor, borderRadius: primaryBorderRadius}}>
     <Alert icon={<EditOutlined />} style={{ 
         backgroundColor: silverColor, fontWeight: '500', border: '10px solid white', borderRadius: '8px 8px 0px 0px', padding: '7px 12px', 
     }} message={<h4 style={{
@@ -154,8 +160,10 @@ const NewEmployeeForm = () => {
       </Form.Item>
     </Form>
     </div>
-
-    </div>
+    </Col>
+    <Col xs={0} md={2}></Col>
+    </Row> 
+   
     <br/>
     <br/>
     <br/>

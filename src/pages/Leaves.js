@@ -2,7 +2,7 @@ import { t } from "i18next";
 import { bannerColor, errorColor, infoColor, leavesBannerColor, successColor, white } from "../css";
 import ApplyLeaveForm from "../components/ApplyLeaveForm";
 import ToolBanner from "../components/ToolBanner";
-import { Alert, Button, Card, Collapse, Drawer, List, Spin, Tabs, Tooltip, message } from "antd";
+import { Alert, Button, Card, Row,  Col, Collapse, Drawer, List, Spin, Tabs, Tooltip, message } from "antd";
 import { useEffect, useState } from "react";
 import { getLeaveApplications } from "../services/leaveService";
 import { useAppContext } from "../context/AppContext";
@@ -53,14 +53,32 @@ function Leaves() {
     return ( <>
     {/* banner with background on the top with info about organisation chart */}
     <ToolBanner icon={<CompassOutlined />} title={t('tools.leaves')} subTitle={t('Manage your leaves')} />
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
+    <Row>
+    <Col xs={0} md={2}></Col>
 
+    <Col xs={24} md={10} style={{height: '45vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}} align="center">
+ 
+        <Drawer width={'50%'} title="Apply Leave" visible={showApplyLeaveForm} onClose={() => setShowApplyLeaveForm(false)}>
+            <ApplyLeaveForm setShowApplyLeaveForm={setShowApplyLeaveForm} reloadApplications={reloadApplications} /> 
+        </Drawer> 
+             
+            <img src={addLeave} style={{width: '45%'}} />
+            <br/>
+            <br/>
+            <Button style={{width: '30%'}} type="primary" onClick={() => setShowApplyLeaveForm(true)}>Apply Leave <ImportOutlined /></Button> 
+          
+    </Col>
 
+    <Col xs={24} md={10} align="center" style={{padding: '0px 20px'}}>
     
-    {loadingLeaveApplications ? <div style={{width: '48%', display: 'flex', justifyContent: 'center', position: 'relative'}}><Spinner text={t('Leaves')} /></div> : 
-    <div style={{width: '38%'}}>
+    {loadingLeaveApplications ? <div align="center">
+        <br/>
+        <br/>
+        <br/>
+    <Spinner text={t('Leaves')} /></div> :  
+    <div align="center">
         <Tabs
-                label="faf"
+        align='left'
                 id="career-and-performance-tabs"
                 defaultActiveKey="1"
                 items={[
@@ -89,29 +107,13 @@ function Leaves() {
                 //     children: 'Coming soon'
                 // }
                 ]}
-                />
-    <br/>
-    </div>
+                /> 
+                </div>
     }
- 
-        <Drawer width={'50%'} title="Apply Leave" visible={showApplyLeaveForm} onClose={() => setShowApplyLeaveForm(false)}>
-            <ApplyLeaveForm setShowApplyLeaveForm={setShowApplyLeaveForm} reloadApplications={reloadApplications} /> 
-        </Drawer>
-        
-        <div style={{width: '52%', height: '45vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}} align="center">
-            
-            <br/>
-            <br/>
-            <img src={addLeave} style={{width: '40%'}} />
-            <br/>
-            <br/>
-            <br/>
-            <Button style={{width: '30%'}} type="primary" onClick={() => setShowApplyLeaveForm(true)}>Apply Leave <ImportOutlined /></Button> 
-        </div> 
 
-    </div>
-    <br/>
-    <br/>
+    </Col>
+    <Col xs={0} md={2}></Col>
+    </Row> 
     </> );
 }
 
