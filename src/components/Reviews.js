@@ -46,13 +46,13 @@ function Reviews() {
         }
     }
 
-    return (<>
+    return (<div style={{backgroundColor: silverColor}}> 
+
         <Steps
         id="reviewSteps"
         style={{
-            padding: '100px 150px',
             margin: '0px',
-            backgroundColor: silverColor
+            padding: '50px 30px'
         }} direction="horizontal" current={review ? review.managerReview.rating ? review.finalCommentsAfterReviewDiscussion ? 3 : 2 : 1 : 0}>
             <Steps.Step
                 title="Self-Review" 
@@ -74,17 +74,14 @@ function Reviews() {
                 description="" 
             />
         </Steps>
-                
-        <br/>
-        <br/>
+                 
         
         { loadingReview ? <Spinner height={'30vh'} /> : showCreateReviewForm ? <SelfReviewForm reviewSavedToDb={() => loadReview()} /> : 
         <div style={{display:'flex', justifyContent: 'space-around', alignItems: 'flex-start'}}>
-          <img style={{width: '28%'}} src={reviewProcess} />
-
+        
           { review &&  <PerformanceReviewDisplay review={review} />}
         </div> }
-    </> );
+    </div> );
 }
 
 export default Reviews;

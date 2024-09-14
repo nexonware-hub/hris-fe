@@ -2,7 +2,7 @@ import { t } from "i18next";
 import ToolBanner from "../components/ToolBanner";
 import React, { useEffect, useState } from "react";
 import { useAppContext } from "../context/AppContext";
-import { Form, Select, Button, Alert, Card, Popover, Drawer, Tabs, Tag, message} from 'antd';
+import { Form, Select, Button, Alert, Row, Col, Tabs, Tag, message} from 'antd';
 import { AimOutlined, ArrowLeftOutlined, ArrowRightOutlined, BarChartOutlined, EditOutlined, FileDoneOutlined, ImportOutlined, ProfileOutlined, RocketOutlined } from "@ant-design/icons";
 import OKRForm from "../components/OKRForm";
 import ListOfGoals from "../components/ListOfGoals";
@@ -57,7 +57,7 @@ function CareerAndPerformance() {
               labelAlign="top"
               name="performanceCycle"
               rules={[{ required: true, message: 'Please select a performance cycle' }]}
-              style={{width: '25%', display: 'inline-block'}}
+              style={{ width: '150px', display: 'inline-block'}}
             >
               <Select defaultValue={performanceCycle} onChange={(value) => {saveCareerAndPerformanceState({ ...state.careerAndPerformance, performanceCycle: value })}} 
               placeholder="Select Performance Cycle" options={performanceCycles?.map((cycle, index) => ({ value: cycle, label: cycle }))} />
@@ -65,15 +65,12 @@ function CareerAndPerformance() {
 
             &nbsp;
             &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
       
             <Form.Item
               label="Cycle Period"
               name="cycleperiod"
               rules={[{ required: true, message: 'Please select a quarter' }]}
-              style={{width: '25%', display: 'inline-block'}}
+              style={{width: '170px', display: 'inline-block'}}
             >
               <Select defaultValue={cyclePeriod} onChange={(value) => saveCareerAndPerformanceState({ ...state.careerAndPerformance, cyclePeriod: value })} placeholder="Select Quarter" options={cyclePeriods} />
             </Form.Item>
@@ -139,24 +136,45 @@ function CareerAndPerformance() {
                     label: 'Manage Goals',
                     key: '1',
                     icon: <AimOutlined />,
-                    children: <div style={{height: '100%', display: 'flex', justifyContent: 'space-around', paddingTop: '20px'}}>
-                            <div style={{width: '40%', position: 'relative', display: 'flex', flexDirection: 'column'}}>
-                                <div>
-                                    <h3 style={{fontWeight: '500', marginTop: '0px'}}>List of Goals for <Tag>{ cyclePeriods.find(x => x.value == cyclePeriod).label }, {performanceCycle}</Tag></h3>
-                                    {loadingGoals && goals==null ? <Spinner text={'Loading Goals'} /> : <ListOfGoals items={goals} /> }
-                                </div>
-                            </div>
-                            {
-                              showOKRForm ? <OKRForm setShowOKRForm={setShowOKRForm} loadingGoals={loadingGoals} loadGoals={loadGoals} performanceCycle={performanceCycle} cyclePeriod={cyclePeriod} state={state} cyclePeriods={cyclePeriods} />
-                              :
-                              <div style={{width: '38%', height: '45vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', position: 'relative'}} align="center">
-                              <img src={setAGoal} style={{width: '40%'}} />
-                              <br/>
-                              <Button style={{width: '38%'}} type="primary" onClick={() => setShowOKRForm(true)}>Set a goal <ImportOutlined /></Button> 
-                          </div>
-                            }
-                            
-                    </div>,
+                    children: <Row style={{ height: '100%', paddingTop: '20px' }}>
+                      <Col xs={0} md={1}></Col>
+                      <Col xs={24} md={10} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                      {showOKRForm ? (
+                        <OKRForm
+                          setShowOKRForm={setShowOKRForm}
+                          loadingGoals={loadingGoals}
+                          loadGoals={loadGoals}
+                          performanceCycle={performanceCycle}
+                          cyclePeriod={cyclePeriod}
+                          state={state}
+                          cyclePeriods={cyclePeriods}
+                        />
+                      ) : (
+                        <div style={{ width: '100%', textAlign: 'center', marginBottom: '50px' }}>
+                          <br/>
+                          <img src={setAGoal} style={{ width: '35%' }} />
+                          <br />
+                          <br />
+                          <Button type="primary" onClick={() => setShowOKRForm(true)}>
+                            Set a goal <ImportOutlined />
+                          </Button>
+                        </div>
+                      )}
+                    </Col>
+                    <Col xs={0} md={1}></Col>
+
+                    <Col xs={0} md={1}></Col>
+                    <Col xs={24} md={10} style={{ display: 'flex', flexDirection: 'column' }}>
+                      <div>
+                        <h3 style={{ fontWeight: '500', marginTop: '0px' }}>
+                          List of Goals for <Tag>{ cyclePeriods.find(x => x.value === cyclePeriod).label }, {performanceCycle}</Tag>
+                        </h3>
+                        {loadingGoals && goals == null ? <Spinner text={'Loading Goals'} /> : <ListOfGoals items={goals} />}
+                      </div>
+                    </Col>
+                    <Col xs={0} md={1}></Col>
+                  </Row>
+                  ,
                 },
                 {
                     label: 'Your Performance Reviews',
@@ -168,7 +186,13 @@ function CareerAndPerformance() {
                     label: 'Provide Reviews',
                     key: '3',
                     icon: <EditOutlined />,
-                    children: <ProvideReview directs={directs} />
+                    children: <Row>
+                      <Col xs={0} md={6}></Col>
+                      <Col xs={24} md={12}>
+                        <ProvideReview directs={directs} />
+                      </Col>
+                      <Col xs={0} md={6}></Col>
+                      </Row>
                 }
                 // {
                 //     label: 'Feedbacks',

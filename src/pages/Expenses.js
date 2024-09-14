@@ -85,7 +85,8 @@ function Expenses() {
     return (
         <>
             <ToolBanner icon={<FileDoneOutlined />} title={t('Expenses')} subTitle={t('Manage Expense Reports')} />
-            {loadingExpenses ? <Spinner text={'Expenses'} height={'60vh'} /> : <div style={{margin: '0px 40px'}}>
+            {loadingExpenses ? <Spinner text={'Expenses'} height={'60vh'} /> : 
+            <div style={{margin: '0px 40px'}}>
                 <br/>
                 <br/>
             <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-end'}}>
@@ -101,8 +102,6 @@ function Expenses() {
                 color: primaryTextColor
             }}>List of Submitted Items</h3>
             <Tabs
-            style={{}}
-                label="faf"
                 id="career-and-performance-tabs"
                 defaultActiveKey="1"
                 items={[
@@ -110,19 +109,31 @@ function Expenses() {
                     label: 'Pending',
                     key: '1',
                     icon: <WarningOutlined style={{color: 'orange'}} />,
-                    children: <Table size="small" pagination={{pageSize: 9}} columns={columns} dataSource={expensesForTable?.filter(exp => exp.status == 0)} />
+                    children: <div style={{maxWidth: '100vw', overflow: 'auto'}}>
+                        <span style={{color: 'silver'}}>
+                            <i>scroll horizontally</i>
+                        </span>
+                        <Table size="small" pagination={false} columns={columns} dataSource={expensesForTable?.filter(exp => exp.status == 0)} /></div>
                 },
                 {
                     label: 'Approved',
                     key: '2',
                     icon: <CheckCircleOutlined style={{color: successColor}} />, 
-                    children: <Table size="small" pagination={{pageSize: 9}} columns={columns} dataSource={expensesForTable?.filter(exp => exp.status == 1)} />
+                    children: <div style={{maxWidth: '100vw', overflow: 'auto'}}>
+                        <span style={{color: 'silver'}}>
+                            <i>scroll horizontally</i>
+                        </span>
+                        <Table size="small" pagination={false} columns={columns} dataSource={expensesForTable?.filter(exp => exp.status == 1)} /></div>
                 },
                 {
                     label: 'Rejected',
                     key: '3',
                     icon: <CloseCircleOutlined style={{color: errorColor}}/>,
-                    children: <Table size="small" pagination={{pageSize: 9}} columns={columns} dataSource={expensesForTable?.filter(exp => exp.status == -1)} />
+                    children: <div style={{maxWidth: '100vw', overflow: 'auto'}}>
+                        <span style={{color: 'silver'}}>
+                            <i>scroll horizontally</i>
+                        </span>
+                        <Table size="small" pagination={false} columns={columns} dataSource={expensesForTable?.filter(exp => exp.status == -1)} /></div>
 
                 }
                 // {

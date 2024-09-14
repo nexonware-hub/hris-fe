@@ -83,7 +83,7 @@ function OrgChart() {
                     </>
                     :
                     <>
-                    <div align="right" style={{margin: '0px 83px', cursor: 'pointer'}}>
+                    {/* <div align="right" style={{margin: '0px 83px', cursor: 'pointer'}}>
                     <Popover placement="top" content={
                     <div style={{width: '100px'}}>
                        <span onClick={()=>{
@@ -98,7 +98,7 @@ function OrgChart() {
                 }>
                       <SettingOutlined size={'large'} />  
                         </Popover>
-                    </div>
+                    </div> */}
               
                 <OrgChartFC employee={state.currentEmployee} listOfDirectReports={listOfDirectReports} />
                     </>

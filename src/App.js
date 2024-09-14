@@ -119,7 +119,7 @@ const App = () => {
     <AppRoutes />
 
     {isPwaButtonVisible && (
-        <Button 
+        (window.innerWidth < window.innerHeight) && <Button 
           icon={<DownloadOutlined />}
           onClick={handleInstallClick}
           size='small'

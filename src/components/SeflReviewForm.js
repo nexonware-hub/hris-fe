@@ -38,7 +38,7 @@ const SelfReviewForm = ({reviewSavedToDb}) => {
     disabled={postReviewResponseLoading}
     style={{ margin: 'auto', 
     border: `1px solid ${greyOnWhiteColor}`,
-    padding: '12px 20px', backgroundColor: '#fff', borderRadius: '8px', width: '50%' , height: '100%'}}
+    padding: '12px 20px', backgroundColor: '#fff', borderRadius: '8px', height: '100%'}}
 
       form={form}
       layout="vertical"

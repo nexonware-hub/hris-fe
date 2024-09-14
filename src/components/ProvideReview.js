@@ -15,8 +15,9 @@ const ProvideReview = ({directs}) => {
   const [postReviewResponseLoading, setPostReviewResponseLoading] = useState(false);
 
   const handleSubmit = (values) => {
+    message.error('Something went wrong, copy your text before leaving this page.');
     // setPostReviewResponseLoading(true);
-    // postReview({selfReview: {...values}, performanceCycle: state.careerAndPerformance.performanceCycle, cyclePeriod: state.careerAndPerformance.cyclePeriod}, state.apiToken).then((res) => {
+    // updateReview({selfReview: {...values}, performanceCycle: state.careerAndPerformance.performanceCycle, cyclePeriod: state.careerAndPerformance.cyclePeriod}, state.apiToken).then((res) => {
     //     console.log(res);
     //     reviewSavedToDb();
     //     setPostReviewResponseLoading(false);
@@ -30,7 +31,7 @@ const ProvideReview = ({directs}) => {
     <Form
     style={{ margin: 'auto', 
     border: `1px solid ${greyOnWhiteColor}`,
-    padding: '12px 20px', backgroundColor: '#fff', borderRadius: '8px', width: '50%' , height: '100%', marginTop: '30px'}}
+    padding: '12px 20px', backgroundColor: '#fff', borderRadius: '8px' , height: '100%', marginTop: '30px'}}
       form={form}
       layout="vertical"
       onFinish={handleSubmit}

@@ -11,7 +11,7 @@ const PerformanceReviewDisplay = ({ review }) => {
     <Card
       title={<span style={{ fontWeight: '500' }}>{`Performance Review - ${performanceCycle} (${cyclePeriod.toUpperCase()})`}</span>}
       bordered={false}
-      style={{ borderRadius: 8, 
+      style={{ borderRadius: 0, 
         // boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
         width: '100%', margin: 'auto' }}
     >

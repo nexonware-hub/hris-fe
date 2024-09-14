@@ -10,6 +10,16 @@ export const postReview = async (data, apiToken) => {
     })
 }
 
+export const updateReview = async (data, apiToken) => {
+    // not implemented on backend
+    return axiosInstance.post(`${BASE_URL}/api/reviews/update`, data, {
+        headers: {
+            "Authorization": `Bearer ${apiToken}`,
+            "Content-Type": "application/json"
+        }
+    })
+}
+
 export const getReviewByCyclePeriod = async (performanceCycle, cyclePeriod, apiToken) => {
     return axiosInstance.post(`${BASE_URL}/api/reviews/getreviewbycycleperiod`, {
         performanceCycle,
