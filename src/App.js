@@ -123,12 +123,16 @@ const App = () => {
           icon={<DownloadOutlined />}
           onClick={handleInstallClick}
           size='small'
+          type='primary'
           style={{
             position: 'fixed',
-            bottom: '-10px',
+            // bottom: '-10px',
+            bottom: '0px',
             right: '0px',
-            rotate: '90deg',
-            transformOrigin: 'top right',
+            // rotate: '90deg',
+            // transformOrigin: 'top right',
+            padding: '10px',
+            borderRadius: '999px 0px 0px 999px'
           }}
         >
           Download App
