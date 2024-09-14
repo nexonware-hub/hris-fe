@@ -56,7 +56,7 @@ function Leaves() {
     <Row>
     <Col xs={0} md={2}></Col>
 
-    <Col xs={24} md={10} style={{height: '45vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}} align="center">
+    <Col xs={24} md={10} style={{height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}} align="center">
  
         <Drawer width={'50%'} title="Apply Leave" visible={showApplyLeaveForm} onClose={() => setShowApplyLeaveForm(false)}>
             <ApplyLeaveForm setShowApplyLeaveForm={setShowApplyLeaveForm} reloadApplications={reloadApplications} /> 
