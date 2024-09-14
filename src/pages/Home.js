@@ -98,7 +98,7 @@ const Home = () => {
         alignItems: 'center',
         paddingTop: '60px',
         paddingBottom: '15px',
-        paddingLeft: '70px',
+        paddingLeft: '65px',
         flexWrap: 'wrap',
         fontSize: '14px',
         maxWidth: '70vw'
