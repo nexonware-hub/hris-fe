@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { greyOnWhiteColor, primaryColor, primaryTextColor, silverColor, successColor} from '../css';
 import { info } from 'sass';
 import { backgroundImageForAuthAndLandingPages } from '../Constants';
+import { logo } from '../assets';
 
 const { Footer } = Layout;
 const { Title, Paragraph, Text } = Typography;
@@ -42,18 +43,22 @@ function LandingPage() {
 const navigate = useNavigate();
 
  const takeToHris = () => {
-    navigate('/hris');
+    navigate('/hris/home');
     window.location.reload(); // This will refresh the page
   };
 
 
     return (
-        <Layout style={{ padding: '0px 10px',
+        <Layout style={{ padding: '0px 20px',
         }}>
 <br/>
             <Row justify="center">
-                <Col xs={24} md={16} style={{textAlign: 'left'}}> 
+                <Col xs={24} md={16} style={{textAlign: 'left'}}>
+                    <br/>
+                    <br/>
+                <img src={logo} style={{width: '70px', marginBottom: '-5px'}} /> &nbsp; 
                     <Title level={1} style={{ color: infoColor, position: 'relative', display: 'inline-block', fontWeight: '500'}}>
+                       
                         CORE.HRIS
                         <span style={{position: 'absolute', top: '42px', right: '0px', fontSize: '15px', fontWeight: '400'}}>by Nexonware</span>
                     </Title>
@@ -63,7 +68,7 @@ const navigate = useNavigate();
                     <br/>
                    
                     <Paragraph style={{ fontSize: '16px', color: primaryTextColor }}>
-                        Simplify your HR management with our comprehensive solution. From organizational charts to leave management, performance tracking, and expense management—everything in one place.
+                    Streamlined HR management, all in one place. Designed to enhance efficiency and boost employee satisfaction.
                     </Paragraph>
 
                     <br/>
@@ -74,15 +79,26 @@ const navigate = useNavigate();
                     style={{
                         color: 'gray',
                         fontWeight: '400'
-                    }}>"Comprehensive, scalable, cost efficient and easy to use"</h1>
+                    }}>"Empowering teams and elevating their work experience"</h1>
 
 <br/>
 <br/>
-
+<div align="center">
                 
-                    <Button onClick={takeToHris} type="default" size="large" style={{ marginTop: '20px' }}>
+                    <Button onClick={takeToHris} type="primary"
+        size="large"
+        style={{
+          borderColor: '#1890ff',
+          borderRadius: '999px',
+          padding: '24px 29px',
+          fontSize: '19px',
+          fontWeight: 'bold',
+          transition: 'background-color 0.3s, transform 0.3s',
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+        }}>
                         Get Started <CaretRightOutlined />
                     </Button>
+                    </div>
                 </Col>
             </Row>
 
@@ -233,12 +249,12 @@ const navigate = useNavigate();
             <br/>
 
 
-            <Footer style={{ backgroundColor: 'rgba(0, 21, 41, 0.8)', padding: '60px 50px', width: '100vw', left: '0px', marginLeft: '-10px' }}>
+            <Footer style={{ backgroundColor: 'rgba(0, 21, 41, 0.8)', padding: '60px 50px', width: '100vw', left: '0px', marginLeft: '-20px' }}>
                 <Row justify="space-around" gutter={[32, 32]} style={{ color: '#ffffff' }}>
                     <Col xs={24} md={6}>
                         <Title level={4} style={{ color: '#ffffff' }}>About Nexonware</Title>
                         <Paragraph style={{ color: '#d9d9d9' }}>
-                            [Your HRIS Name] is your all-in-one HR management solution, offering seamless and integrated tools to manage your organizational needs with efficiency and ease.
+                        Nexonware is a dynamic software company committed to delivering cutting-edge solutions across various industries. We specialize in developing innovative, scalable, and efficient software to address a broad range of business needs.
                         </Paragraph>
                     </Col>
 
@@ -257,8 +273,6 @@ const navigate = useNavigate();
                         <Space direction="vertical">
                             <Link href="#help" style={{ color: '#d9d9d9' }}>ATS</Link>
                             <Link href="#guides" style={{ color: '#d9d9d9' }}>CORE.HRIS</Link>
-                            <Link href="#tutorials" style={{ color: '#d9d9d9' }}>Product A</Link>
-                            <Link href="#case-studies" style={{ color: '#d9d9d9' }}>Product B</Link>
                         </Space>
                     </Col>
 

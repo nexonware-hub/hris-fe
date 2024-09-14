@@ -132,7 +132,7 @@ const App = () => {
             // rotate: '90deg',
             // transformOrigin: 'top right',
             padding: '10px',
-            borderRadius: '999px 0px 0px 999px'
+            borderRadius: '7px 0px 0px 0px'
           }}
         >
           Download App

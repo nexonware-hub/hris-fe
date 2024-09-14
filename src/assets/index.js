@@ -6,6 +6,7 @@ import careerAndPerformance from './careerAndPerformance.svg';
 import setAGoal from './setAGoal.svg';
 import reviewProcess from './reviewProcess.svg';
 import company from './company.svg';
+import logo from './logo.png';
 
 export { 
     signup,
@@ -15,5 +16,6 @@ export {
     careerAndPerformance,
     setAGoal,
     reviewProcess,
-    company
+    company,
+    logo
  }
