@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import { Alert, Button, Checkbox, Form, Input , Spin, message} from 'antd';
+import { Alert, Button, Checkbox, Form, Input , Spin, Tag, message} from 'antd';
 import { EmailPasswordSignIn } from '../firebase/email_password_auth';
 import { useAppContext } from '../context/AppContext';
 import { Link, useParams } from 'react-router-dom';
@@ -8,7 +8,7 @@ import { sendEmailVerification } from 'firebase/auth';
 import { auth } from '../firebase';
 import { greyOnWhiteColor, primaryBorderRadius, white } from '../css';
 import Toast from './Toast';
-import { Loading3QuartersOutlined, MailOutlined } from '@ant-design/icons';
+import { CaretRightFilled, Loading3QuartersOutlined, MailOutlined } from '@ant-design/icons';
 
 export const SignIn = () => { 
 
@@ -25,14 +25,11 @@ const onFinishFailed = (errorInfo) => {
 
     return(
         <div style={{zIndex: '99999', backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '30px', borderRadius: primaryBorderRadius, border: '1px solid ' + greyOnWhiteColor}}> 
-            <Alert message="Sign In" type="info" />
+            <Tag>Sign In</Tag>
             <br/>
             <br/>
             <Form
                 name="basic"
-                style={{
-                maxWidth: 600,
-                }}
                 initialValues={{
                 remember: true,
                 }}
@@ -65,23 +62,15 @@ const onFinishFailed = (errorInfo) => {
                 >
                 <Input.Password />
                 </Form.Item>
-
-                <Form.Item
-                name="remember"
-                valuePropName="checked"
-                wrapperCol={{
-                    offset: 8,
-                    span: 16,
-                }}
-                >
-                <Checkbox>Remember me</Checkbox>
-                </Form.Item>
-
+<br/>
                 <Form.Item
                 >
-                <Button type="primary" htmlType="submit" style={{width: '100%'}}>
-                    Submit
+                    <div align="right">                
+                        <Button type="primary" htmlType="submit">
+                    Submit <CaretRightFilled />
                 </Button>
+                </div>
+
                 </Form.Item>
             </Form>
             
@@ -140,7 +129,7 @@ export const SignUp = () => {
         </>
         :
             <div style={{zIndex: '99999', backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '30px', borderRadius: primaryBorderRadius, border: '1px solid ' + greyOnWhiteColor}}> 
-                { signedUp ? <Alert message="Sign up successful" type="success" showIcon /> : <Alert message="Sign Up" type="info" />}
+                { signedUp ? <Alert message="Sign up successful" type="success" showIcon /> :  <Tag>Sign Up</Tag>}
             <br/>
             <br/>
             {
@@ -211,16 +200,17 @@ export const SignUp = () => {
                     <Input.Password />
                     </Form.Item>
 
-                    <Form.Item
-                     
-                    >
-                    <Button type="primary" htmlType="submit" style={{width: '100%'}}>
-                        {loading ? <Spin indicator={<Loading3QuartersOutlined style={{color: 'white'}} spin/>} /> : 'Submit'}
-                    </Button>
-                    </Form.Item>
+                    <br/>
+                <Form.Item
+                >
+                    <div align="right">                
+                        <Button type="primary" htmlType="submit">
+                    Submit <CaretRightFilled />
+                </Button>
+                </div>
+
+                </Form.Item>
                 </Form>
             }
-                
-                
                 </div>
     )};
