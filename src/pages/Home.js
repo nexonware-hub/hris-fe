@@ -102,7 +102,7 @@ const Home = () => {
         paddingRight: '15px',
         flexWrap: 'wrap',
         fontSize: '14px',
-        maxWidth: '70vw'
+        maxWidth: '75vw'
       }}>
         {state.tools?.find(x => x.displayName == 'Organisational Chart') &&
         <Link className='hover-magnify' style={{textDecoration: 'none', marginBottom: '30px', color: primaryTextColor, marginRight: '42px'}} to="/organisationalchart">
@@ -149,7 +149,7 @@ const Home = () => {
         <BarChartOutlined style={{...toolIconCommonCss, backgroundColor: primaryTextColor}} />
         <br/>
         <br/>
-        Analytics
+        Analytics  <br/> &nbsp;
         </Link>}
 
         <Link className='hover-magnify' style={{textDecoration: 'none', color: primaryTextColor, marginBottom: '30px', marginRight: '42px'}} to="/requestTools">

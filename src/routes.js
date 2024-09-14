@@ -20,6 +20,7 @@ import NewEmployeeForm from './components/NewEmployeeForm';
 import CompanyInfo from './components/CompanyInfo';
 import YourCalendar from './pages/YourCalendar';
 import AuditLogs from './pages/AuditLogs';
+import Analytics from './pages/Analytics';
 
 const AppRoutes = () => {
 
@@ -60,6 +61,7 @@ const AppRoutes = () => {
                 <Route path="/company" element={<CompanyInfo />} />
                 <Route path="/calendar" element={<YourCalendar />} />
                 <Route path="/audit-logs" element={<AuditLogs />} />
+                <Route path="/analytics" element={<Analytics />} />
             </Routes>
             </> 
             :
