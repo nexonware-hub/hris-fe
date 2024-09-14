@@ -225,9 +225,11 @@ const navigate = useNavigate();
                     <Paragraph style={{ fontSize: '16px', color: '#555' }}>
                         Transform the way you handle HR tasks with our innovative and user-friendly platform.
                     </Paragraph>
-                    <Button type="primary" size="large" style={{ marginTop: '20px' }}>
-                        Request a Demo <CaretRightOutlined />
-                    </Button>
+                        <a href="https://calendly.com/neeleshsharma/core-hris-demo" style={{textDecoration: 'none'}}>
+                            <Button type="primary" size="large" style={{ marginTop: '20px' }}>
+                                Request a Demo <CaretRightOutlined />
+                            </Button>
+                        </a>
                 </Col>
 
                 <Col xs={0} md={4} style={{textAlign: 'center'}}>
