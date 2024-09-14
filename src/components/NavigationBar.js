@@ -38,18 +38,25 @@ const primaryColor = primaryTextColor;
      <FlagOutlined />&nbsp; Your Company
     </Link>
   </Menu.Item>
-  <Menu.Item key="3-1">
+  {/* <Menu.Item key="3-1">
     <Link to={'/calendar'} style={{ textDecoration: 'none', color: 'black', fontSize: '15px' }}>
      <CalendarOutlined />&nbsp; Your Calender
     </Link>
-  </Menu.Item>
-  {state.currentEmployee?.roles?.includes(Roles.EDITOR) && <Menu.Item key="2">
+  </Menu.Item> */}
+  {/* {state.currentEmployee?.roles?.includes(Roles.EDITOR) && <Menu.Item key="2">
     <Link to={`/ats`} style={{ textDecoration: 'none', color: 'black', fontSize: '15px' }}>
      <PaperClipOutlined />&nbsp; ATS (Recruiting)
     </Link>
-  </Menu.Item>}
-
-  {state.currentEmployee?.roles?.includes(Roles.EDITOR) && (
+  </Menu.Item>} */}
+  {
+  state.currentEmployee?.roles?.includes(Roles.EDITOR) &&
+  <Menu.Item key="4-1">
+        <Link to={'/employee-management/new'} style={{ textDecoration: 'none', color: 'black', fontSize: '15px' }}>
+          <PlusCircleOutlined style={{color: primaryColor}} /> &nbsp; Add New Employee
+        </Link>
+      </Menu.Item>
+}
+  {/* {state.currentEmployee?.roles?.includes(Roles.EDITOR) && (
     <Menu.SubMenu className="sub-menu" icon={<CaretLeftFilled />} key="sub1" title="Employee Management" style={{ fontSize: '15px' }}>
          <Menu.Item key="4-1">
         <Link to={'/employee-management/new'} style={{ textDecoration: 'none', color: 'black', fontSize: '15px' }}>
@@ -62,12 +69,15 @@ const primaryColor = primaryTextColor;
         </Link>
       </Menu.Item>
     </Menu.SubMenu>
-  )}
-  <Menu.Item key="5">
+  )} */}
+  {
+    state.currentEmployee?.roles?.includes(Roles.EDITOR) &&
+    <Menu.Item key="5">
     <Link to={`/audit-logs`} style={{ textDecoration: 'none', color: 'black', fontSize: '15px' }}>
       <SafetyCertificateOutlined />&nbsp; Audit logs
     </Link>
   </Menu.Item>
+  }
   <Menu.Item key="6" onClick={() => {
     logout();
   }}>
@@ -76,16 +86,6 @@ const primaryColor = primaryTextColor;
 </Menu>
 
   );
-
-
-    const iconStyle={
-        padding: '8px',
-        marginLeft: '25px',
-        borderRadius: '50%',
-        backgroundColor: white,
-        fontSize: '18px',
-        cursor: 'pointer',
-    }
 
     return ( 
         <div style={{
