@@ -63,7 +63,7 @@ const navigate = useNavigate();
         borderBottom: '1px solid ' + greyOnWhiteColor
     }}>
          <a href="https://calendly.com/neeleshsharma/core-hris-demo" target='_blank' style={{textDecoration: 'none'}}>
-                            <Button type="secondary" size="large" style={{ marginRight: '20px',borderRadius: '999px', border: '0px solid ' + 'black', color: 'black', fontWeight: '500', backgroundColor: 'orange' }}>
+                            <Button type="secondary" size="large" style={{ marginRight: '20px',borderRadius: '999px', border: '0px solid ' + 'black', color: primaryTextColor, fontWeight: '500', backgroundColor: 'orange' }}>
                                 Book a Demo <CaretRightOutlined />
                             </Button>
                         </a>
