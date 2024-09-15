@@ -290,7 +290,7 @@ const navigate = useNavigate();
                     <Col xs={24} md={6}>
                         <Title level={4} style={{ color: '#ffffff' }}>Subscribe to our Newsletter</Title>
                         <Paragraph style={{ color: '#d9d9d9' }}>
-                            Stay updated with the latest news and special offers from [Your HRIS Name].
+                            Stay updated with the latest news and special offers from Nexonware.
                         </Paragraph>
                         <Space>
                             <Input placeholder="Enter your email" style={{ width: '150px' }} />
