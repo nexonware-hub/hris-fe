@@ -5,7 +5,7 @@ import { FacebookOutlined, TwitterOutlined, LinkedinOutlined, InstagramOutlined,
 import { Link, useNavigate } from 'react-router-dom';
 import { greyOnWhiteColor, primaryColor, primaryTextColor, silverColor, successColor} from '../css';
 import { info } from 'sass';
-import { backgroundImageForAuthAndLandingPages } from '../Constants';
+import { backgroundImageForAuthAndLandingPages, backgroundImageForAuthPages } from '../Constants';
 import { logo } from '../assets';
 
 const { Footer } = Layout;
@@ -49,8 +49,8 @@ const navigate = useNavigate();
 
 
     return (
-        <Layout style={{ padding: '0px 20px',
-        }}>
+        <Layout style={{ padding: '0px 20px', backgroundColor: 'white'}}>
+   
 <br/>
             <Row justify="center">
                 <Col xs={24} md={16} style={{textAlign: 'left'}}>
