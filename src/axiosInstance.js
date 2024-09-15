@@ -21,9 +21,8 @@ axiosInstance.interceptors.response.use(
       // Call the logout function
       // message.info( !window.location.pathname.includes('signup') ? t('Log in for a new session') : t('Sign up for a new session'));
       setTimeout(() => {
-        window.location.reload();
-        // logout();
-      }, [2000]);
+        logout();
+      }, []);
     } else if(error.response && error.response.data.message === 'email not verified'){
       message.warning(t('Email not verified'));
       setTimeout(() => {
