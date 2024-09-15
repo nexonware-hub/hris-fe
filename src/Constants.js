@@ -8,7 +8,7 @@ export const ADMIN_EMAIL_SUBSTRING = "adminforaccountcreation";
 export const leavesFolderInStorage = 'leaves';
 export const expensesFolderInStorage = 'expenses';
 
-export const backgroundImageForAuthPages = 'https://images.pexels.com/photos/1353938/pexels-photo-1353938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)';
+export const backgroundImageForAuthPages = 'https://cdn.pixabay.com/photo/2021/07/15/08/43/abstract-6467847_1280.png';
 
 export const Roles = {
     EDITOR: 'editor',

@@ -35,7 +35,7 @@ const toolCardStyle = {
     cursor: 'pointer',
     color: 'white !important',
     
-    // border: '1px solid ' + greyOnWhiteColor,
+    border: '0px solid ' + greyOnWhiteColor,
     height: '100%',
     // backgroundColor: 'rgba(255, 255, 255, 0.85)'
 }
@@ -63,12 +63,16 @@ const navigate = useNavigate();
         borderBottom: '1px solid ' + greyOnWhiteColor
     }}>
          <a href="https://calendly.com/neeleshsharma/core-hris-demo" target='_blank' style={{textDecoration: 'none'}}>
-                            <Button type="secondary" size="large" style={{ marginRight: '20px',borderRadius: '999px', border: '1px solid ' + primaryColor, color: primaryColor, fontWeight: '500' }}>
+                            <Button type="secondary" size="large" style={{ marginRight: '20px',borderRadius: '999px', border: '0px solid ' + 'black', color: 'black', fontWeight: '500', backgroundColor: 'orange' }}>
                                 Book a Demo <CaretRightOutlined />
                             </Button>
                         </a>
     </div>
-        <Layout style={{ padding: '80px 20px', backgroundColor: 'white'}}>
+    <Layout style={{ padding: '80px 20px', backgroundColor: 'white' 
+    // backgroundImage: `url(${backgroundImageForAuthPages})`,
+    //     backgroundRepeat: 'no-repeat', backgroundSize: 'cover' 
+        }}>
+
    
 <br/>
             <Row justify="center">
