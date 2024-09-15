@@ -80,10 +80,10 @@ const navigate = useNavigate();
                 <Col xs={24} md={16} style={{textAlign: 'left'}}>
                    
                 <img src={logo} style={{width: '70px', marginBottom: '-5px'}} /> &nbsp; 
-                    <Title level={1} style={{ color: infoColor, position: 'relative', display: 'inline-block', fontWeight: '500'}}>
+                    <Title level={2} style={{ color: infoColor, position: 'relative', display: 'inline-block', fontWeight: '500'}}>
                        
                         CORE.HRIS
-                        <span style={{position: 'absolute', top: '42px', right: '0px', fontSize: '15px', fontWeight: '400'}}>by Nexonware</span>
+                        <span style={{position: 'absolute', top: '32px', right: '0px', fontSize: '15px', fontWeight: '400'}}>by Nexonware</span>
                     </Title>
 
                     <br/>
