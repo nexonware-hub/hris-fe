@@ -281,8 +281,8 @@ const navigate = useNavigate();
                     <Col xs={24} md={4}>
                         <Title level={4} style={{ color: '#ffffff' }}>Contact</Title>
                         <Space direction="vertical">
-                            <Link href="mailto:support@yourhris.com" style={{ color: '#d9d9d9' }}>support@yourhris.com</Link>
-                            <Link href="tel:+1234567890" style={{ color: '#d9d9d9' }}>+1 234 567 890</Link>
+                            <Link href="mailto:contact@nexonware.com" style={{ color: '#d9d9d9' }}>contact@nexonware.com</Link>
+                            <Link href="tel:919870938860" style={{ color: '#d9d9d9' }}>+91 9870938860</Link>
                             <Link href="#contact" style={{ color: '#d9d9d9' }}>Contact Form</Link>
                         </Space>
                     </Col>
