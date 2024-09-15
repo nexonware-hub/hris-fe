@@ -50,14 +50,30 @@ const navigate = useNavigate();
   };
 
 
-    return (
-        <Layout style={{ padding: '0px 20px', backgroundColor: 'white'}}>
+    return (<>
+    <div 
+    align="right"
+    style={{
+        padding: '10px 0px',
+        position: 'fixed',
+        width: '100vw',
+        top: '0px',
+        backgroundColor: 'white',
+        zIndex: '9999',
+        borderBottom: '1px solid ' + greyOnWhiteColor
+    }}>
+         <a href="https://calendly.com/neeleshsharma/core-hris-demo" target='_blank' style={{textDecoration: 'none'}}>
+                            <Button type="secondary" size="large" style={{ marginRight: '20px',borderRadius: '999px', border: '1px solid ' + primaryColor, color: primaryColor, fontWeight: '500' }}>
+                                Book a Demo <CaretRightOutlined />
+                            </Button>
+                        </a>
+    </div>
+        <Layout style={{ padding: '80px 20px', backgroundColor: 'white'}}>
    
 <br/>
             <Row justify="center">
                 <Col xs={24} md={16} style={{textAlign: 'left'}}>
-                    <br/>
-                    <br/>
+                   
                 <img src={logo} style={{width: '70px', marginBottom: '-5px'}} /> &nbsp; 
                     <Title level={1} style={{ color: infoColor, position: 'relative', display: 'inline-block', fontWeight: '500'}}>
                        
@@ -253,7 +269,7 @@ const navigate = useNavigate();
                         Transform the way you handle HR tasks with our innovative and user-friendly platform.
                     </Paragraph>
                         <a href="https://calendly.com/neeleshsharma/core-hris-demo" target='_blank' style={{textDecoration: 'none'}}>
-                            <Button type="primary" size="large" style={{ marginTop: '20px' }}>
+                            <Button type="primary" size="large" style={{ marginTop: '20px', borderRadius: '999px' }}>
                                 Request a Demo <CaretRightOutlined />
                             </Button>
                         </a>
@@ -353,6 +369,7 @@ const navigate = useNavigate();
                 </Row>
             </Footer>
         </Layout>
+        </>
     );
 }
 
