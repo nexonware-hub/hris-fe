@@ -64,12 +64,12 @@ const navigate = useNavigate();
         borderBottom: '1px solid ' + greyOnWhiteColor
     }}>
          <a href="https://calendly.com/neeleshsharma/core-hris-demo" target='_blank' style={{textDecoration: 'none'}}>
-                            <Button type="secondary" size="large" style={{ marginRight: '20px',borderRadius: '999px', border: '0px solid ' + 'black', color: primaryTextColor, fontWeight: '500', backgroundColor: 'orange' }}>
+                            <Button type="secondary" size="large" style={{ marginRight: '20px',borderRadius: '999px', border: '0px solid ' + 'black', color: primaryTextColor, fontWeight: '500', backgroundColor: 'orange', padding: '0px 25px' }}>
                                 Book a Demo <CaretRightOutlined />
                             </Button>
                         </a>
     </div>
-    <Layout style={{ padding: '80px 20px', backgroundColor: 'white' 
+    <Layout style={{ paddingTop: '80px', paddingLeft: '20px', paddingRight: '20px', backgroundColor: 'white' 
     // backgroundImage: `url(${backgroundImageForAuthPages})`,
     //     backgroundRepeat: 'no-repeat', backgroundSize: 'cover' 
         }}>
@@ -106,6 +106,7 @@ const navigate = useNavigate();
 
 <br/>
 <br/>
+<br/>
 <div align="center" className="hover-magnify">
                 
                     <Button onClick={takeToHris} 
@@ -117,7 +118,7 @@ const navigate = useNavigate();
                         borderRadius: '999px',
                         padding: '24px 29px',
                         fontSize: '19px',
-                        fontWeight: 'bold',
+                        fontWeight: '500',
                         transition: 'background-color 0.3s, transform 0.3s',
                         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
                         backgroundColor: '#1890ff',
@@ -130,6 +131,7 @@ const navigate = useNavigate();
                 </Col>
             </Row>
 
+<br/>
 <br/>
             <br/>
             <br/>
