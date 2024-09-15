@@ -3,7 +3,7 @@ import { Button, Typography, Card, Row, Col, Tag } from 'antd';
 import { Layout, Space, Input } from 'antd';
 import { FacebookOutlined, TwitterOutlined, LinkedinOutlined, InstagramOutlined, ApartmentOutlined, CompassOutlined, RocketOutlined, FileDoneOutlined, ToolFilled, AppstoreAddOutlined, BarChartOutlined, CaretRightOutlined } from '@ant-design/icons';
 import { Link, useNavigate } from 'react-router-dom';
-import { greyOnWhiteColor, primaryColor, primaryTextColor, silverColor, successColor} from '../css';
+import { greyOnWhiteColor, primaryColor, primaryTextColor, silverColor, successColor, white} from '../css';
 import { info } from 'sass';
 import { backgroundImageForAuthAndLandingPages, backgroundImageForAuthPages } from '../Constants';
 import { logo } from '../assets';
@@ -33,9 +33,11 @@ const toolCardStyle = {
     margin: 'auto',
     textAlign: 'center',
     cursor: 'pointer',
+    color: 'white !important',
+    
     // border: '1px solid ' + greyOnWhiteColor,
     height: '100%',
-    backgroundColor: 'rgba(255, 255, 255, 0.85)'
+    // backgroundColor: 'rgba(255, 255, 255, 0.85)'
 }
 
 function LandingPage() {
@@ -83,19 +85,24 @@ const navigate = useNavigate();
 
 <br/>
 <br/>
-<div align="center">
+<div align="center" className="hover-magnify">
                 
-                    <Button onClick={takeToHris} type="primary"
-        size="large"
-        style={{
-          borderColor: '#1890ff',
-          borderRadius: '999px',
-          padding: '24px 29px',
-          fontSize: '19px',
-          fontWeight: 'bold',
-          transition: 'background-color 0.3s, transform 0.3s',
-          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-        }}>
+                    <Button onClick={takeToHris} 
+                        
+                        type="primary"
+                        size="large"
+                        style={{
+                        //   borderColor: '#1890ff',
+                        borderRadius: '999px',
+                        padding: '24px 29px',
+                        fontSize: '19px',
+                        fontWeight: 'bold',
+                        transition: 'background-color 0.3s, transform 0.3s',
+                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                        backgroundColor: '#1890ff',
+                        background: 'linear-gradient(#1890ff 40%, #1890ff 100%)', // Smooth gradient with no white
+                        boxShadow: 'inset 0 0 8px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1)', // Subtle shadow with no white
+                    }}>
                         Get Started <CaretRightOutlined />
                     </Button>
                     </div>
@@ -118,17 +125,25 @@ const navigate = useNavigate();
             <Row justify="center" gutter={[16, 16]}>
             <Col xs={0} md={4}></Col>
                 <Col xs={24} md={8}>
-                    <Card  style={toolCardStyle}>
-                        <Title style={{fontWeight: '300', color: primaryTextColor}} level={3}><ApartmentOutlined /> &nbsp; Organizational Charts <FreeTag /></Title>
-                        <Paragraph>
+                    <Card  style={{...toolCardStyle,
+                backgroundColor: '#4285F4',
+                background: 'linear-gradient(#4285F4 40%, #306BBF 100%)', // Smooth gradient with no white
+                boxShadow: 'inset 0 0 8px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1)', // Subtle shadow with no white
+}}>
+                        <Title style={{fontWeight: '300', color: 'white'}} level={3}><ApartmentOutlined /> &nbsp; Organizational Charts <FreeTag /></Title>
+                        <Paragraph style={{color: 'white'}}>
                             Maintain and visualize your company's hierarchy with ease. Track changes and integrate with Microsoft Teams.
                         </Paragraph>
                     </Card>
                 </Col>
                 <Col xs={24} md={8}>
-                    <Card  style={toolCardStyle}>
-                        <Title style={{fontWeight: '300', color: primaryTextColor}} level={3}><CompassOutlined /> &nbsp; Leave Management <FreeTag /></Title>
-                        <Paragraph>
+                    <Card  style={{...toolCardStyle, backgroundColor: '#DB4437',
+                background: 'linear-gradient(180deg, #DB4437 40%, #B3362B 100%)', // Gradient with darker red, no white
+                boxShadow: 'inset 0 0 8px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1)', // Subtle dark shadow
+                
+                }}>
+                        <Title style={{fontWeight: '300', color: 'white'}} level={3}><CompassOutlined /> &nbsp; Leave Management <FreeTag /></Title>
+                        <Paragraph style={{color: 'white'}}>
                             Effortlessly manage employee leave requests and approvals, ensuring smooth operations.
                         </Paragraph>
                     </Card>
@@ -139,18 +154,27 @@ const navigate = useNavigate();
             <Row justify="center" gutter={[16, 16]}>
             <Col xs={0} md={4}></Col>
                 <Col xs={24} md={8}>
-                    <Card  style={toolCardStyle}>
-                        <Title style={{fontWeight: '300', color: primaryTextColor}} level={3}> <FileDoneOutlined /> &nbsp; Expense Management <FreeTag /></Title>
-                        <Paragraph>
+                    <Card  style={{...toolCardStyle,
+                backgroundColor: '#0F9D58',
+                background: 'linear-gradient(180deg, #0F9D58 40%, #0C7A46 100%)', // Gradient with darker green, no white
+                boxShadow: 'inset 0 0 8px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1)', // Subtle dark shadow
+                
+                }}>
+                        <Title style={{fontWeight: '300', color: 'white'}} level={3}> <FileDoneOutlined /> &nbsp; Expense Management <FreeTag /></Title>
+                        <Paragraph style={{color: 'white'}}>
                             Simplify expense claims and reimbursements, making it easy for employees to manage their finances.
                         </Paragraph>
                     </Card>
                 </Col>
 
                 <Col xs={24} md={8}>
-                    <Card  style={toolCardStyle}>
-                        <Title style={{fontWeight: '300', color: primaryTextColor}} level={3}><RocketOutlined /> &nbsp; Performance & Career <AddOnTag /> </Title>
-                        <Paragraph>
+                    <Card  style={{...toolCardStyle,
+                backgroundColor: '#e3a905',
+                background: 'linear-gradient(180deg, #e3a905 40%, #b38204 100%)', // Gradient with darker gold, no white
+                boxShadow: 'inset 0 0 8px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1)', // Subtle dark shadow
+                }}>
+                        <Title style={{fontWeight: '300', color: 'white'}} level={3}><RocketOutlined /> &nbsp; Performance & Career <AddOnTag /> </Title>
+                        <Paragraph style={{color: 'white'}}>
                             Track and evaluate performance, set goals, and manage career development for your employees.
                         </Paragraph>
                     </Card>
@@ -164,9 +188,12 @@ const navigate = useNavigate();
             <Row justify="center" gutter={[16, 16]}>
             <Col xs={0} md={4}></Col>
                 <Col xs={24} md={8}>
-                    <Card  style={toolCardStyle}>
-                        <Title style={{fontWeight: '300', color: primaryTextColor}} level={3}><BarChartOutlined /> &nbsp; HR Analytics <AddOnTag /> </Title>
-                        <Paragraph>
+                    <Card  style={{...toolCardStyle, backgroundColor: 'grey',
+  background: 'linear-gradient(180deg, grey 40%, #5e5e5e 100%)', // Gradient with darker grey, no white
+  boxShadow: 'inset 0 0 8px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1)', // Subtle dark shadow
+ }}>
+                        <Title style={{fontWeight: '300', color: 'white'}} level={3}><BarChartOutlined /> &nbsp; HR Analytics <AddOnTag /> </Title>
+                        <Paragraph style={{color: 'white'}}>
                             Generate reports on your company's employee's data gathered over time
                         </Paragraph>
                     </Card>
