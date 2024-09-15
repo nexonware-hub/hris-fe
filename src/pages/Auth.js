@@ -3,14 +3,12 @@ import Navigationbar from "../components/NavigationBar";
 import {SignUp, SignIn } from "../components/SignUp";
 import { signin, signup as signupsvg } from './../assets';
 import { Row, Col } from "antd";
+import { silverColor } from "../css";
 
 function Auth({signup, mobile}) {
-    return <>
+    return <div style={{backgroundColor: silverColor, height: '100vh'}}>
     <Navigationbar />
-    <br/>
-    <br/>
-    <br/>
-    <Row>
+    <Row style={{ paddingTop: '100px'}}>
     <Col xs={0} md={2}></Col>
 
     <Col xs={0} md={10} align="center">
@@ -32,7 +30,7 @@ function Auth({signup, mobile}) {
     <Col xs={0} md={2}></Col>
     </Row> 
      
-    </>;
+    </div>;
 }
 
 export default Auth;

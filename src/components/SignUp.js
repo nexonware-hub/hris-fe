@@ -6,7 +6,7 @@ import { Link, useParams } from 'react-router-dom';
 import { signUp } from '../services/signupService';
 import { sendEmailVerification } from 'firebase/auth';
 import { auth } from '../firebase';
-import { greyOnWhiteColor, primaryBorderRadius, white } from '../css';
+import { greyOnWhiteColor, primaryBorderRadius, silverColor, white } from '../css';
 import Toast from './Toast';
 import { CaretRightFilled, Loading3QuartersOutlined, MailOutlined } from '@ant-design/icons';
 
@@ -128,7 +128,7 @@ export const SignUp = () => {
             </div>
         </>
         :
-            <div style={{zIndex: '99999', backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '30px', borderRadius: primaryBorderRadius, border: '1px solid ' + greyOnWhiteColor}}> 
+            <div style={{zIndex: '99999', backgroundColor: silverColor, padding: '30px', borderRadius: primaryBorderRadius, border: '1px solid ' + greyOnWhiteColor}}> 
                 { signedUp ? <Alert message="Sign up successful" type="success" showIcon /> :  <Tag>Sign Up</Tag>}
             <br/>
             <br/>

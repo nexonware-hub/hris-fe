@@ -96,13 +96,13 @@ const primaryColor = primaryTextColor;
             position: 'relative',
             right: '0px',
             borderBottom: '0px solid '+ 'white',
-            backgroundColor: white,
+            backgroundColor: silverColor,
             // background: `linear-gradient(to right,  ${white}, ${white}, ${white}, ${primaryColor})`,
             zIndex: 999,
             color: primaryColor,
             // marginBottom: '25px',
         }}>
-            <span style={{paddingTop: '13px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
+            <span style={{padding: '13px 0px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
                 <span
                 style={{
                     display: 'flex',
