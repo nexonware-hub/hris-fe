@@ -36,7 +36,8 @@ const toolCardStyle = {
     color: 'white !important',
     
     border: '0px solid ' + greyOnWhiteColor,
-    height: '100%',
+    width: '90%',
+    marginBottom: '40px',
     // backgroundColor: 'rgba(255, 255, 255, 0.85)'
 }
 
@@ -152,7 +153,7 @@ const navigate = useNavigate();
 }}>
                         <Title style={{fontWeight: '300', color: 'white'}} level={3}><ApartmentOutlined /> &nbsp; Organizational Charts <FreeTag /></Title>
                         <Paragraph style={{color: 'white'}}>
-                            Maintain and visualize your company's hierarchy with ease. Track changes and integrate with Microsoft Teams.
+                            Maintain and visualize your company's hierarchy with ease and track changes.
                         </Paragraph>
                     </Card>
                 </Col>
